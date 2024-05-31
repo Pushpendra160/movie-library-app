@@ -8,7 +8,7 @@ import { message } from "antd";
 import "./style.scss";
 
 import ContentWrapper from "../contentWrapper/ContentWrapper";
-import logo from "../../assets/movix-logo.svg";
+import logo from "../../assets/moviemania-logo.svg";
 
 const Header = () => {
     const [show, setShow] = useState("top");
@@ -104,12 +104,11 @@ const Header = () => {
                     >
                         TV Shows
                     </li>
-                    <li
-                        className="menuItem"
-                        // onClick={() => navigationHandler("tv")}
-                    >
-                        your fav
-                    </li>
+                    {loginUser && (
+                        <li className="menuItem">
+                          your playlist
+                        </li>
+                    )}
                     <li className="menuItem">
                         <HiOutlineSearch onClick={openSearch} />
                     </li>
@@ -120,7 +119,7 @@ const Header = () => {
                     )}
                     {loginUser && (
                         <li className="menuItem">
-                            <button onClick={logoutHandler}>
+                            <button className="logout" onClick={logoutHandler}>
                                 Logout
                             </button>
                         </li>

@@ -26,7 +26,10 @@
   }
   .login-form button {
     background-color: #344265;
+    padding: 10px 50px;
     color: white;
+    font-weight: 700;
+    font-size: 15px;
     outline: none;
   }
   .login-form button:hover {
@@ -39,4 +42,9 @@
   
   .login-form a:hover {
     color: black !important;
+  }
+  .login-btn button{
+
+  margin-left:10px ;
+     
   }
